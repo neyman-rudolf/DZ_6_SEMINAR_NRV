@@ -3,6 +3,19 @@
 // 0, 7, 8, -2, -2 -> 2
 // 1, -7, 567, 89, 223-> 3
 
+Console.Write("Введите чисто: ");
+int[] array = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
+int count = 0;
+ 
+for (int i = 0; i < array.Length; i++)
+{
+    if (array[i] > 0)
+    {
+        count++;
+    }
+}
+ 
+Console.WriteLine($"Количество элементов больше 0: {count}");
 
 // Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, 
 // заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
